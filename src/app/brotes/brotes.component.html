@@ -1,0 +1,30 @@
+<h2>Brotes del corona</h2>
+<ul class="heroes">
+  <li *ngFor="let brote of brotes"  (click)="onSelect(brote)">
+    <p>
+      <span class="badge">{{brote.nombre}}, </span> {{brote.descripcion}}
+    </p>
+  </li>
+</ul>
+<div *ngIf="selected">
+
+    <h2>{{selected.nombre | uppercase}} Details</h2>
+    <div>
+        <label>descripcion:
+          <input [(ngModel)]="selected.descripcion" placeholder="descripcion"/>
+        </label>
+        <br>
+        <label>Fecha inicio:
+          <input [(ngModel)]="selected.fechainicio" placeholder="fechainicio"/>
+        </label>
+        <br>
+        <label>Fecha final:
+          <input [(ngModel)]="selected.fechafinal" placeholder="fechafinal"/>
+        </label>
+        <br>
+        <button (click)="update(selected)">
+            Guardar
+        </button>
+    </div>
+  
+  </div>

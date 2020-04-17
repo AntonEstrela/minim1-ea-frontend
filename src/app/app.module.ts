@@ -10,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 import { HttpClientModule }    from '@angular/common/http';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { BrotesComponent } from './brotes/brotes.component';
 
 
 
@@ -21,6 +22,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
     MessagesComponent,
     DashboardComponent,
     SubjectsComponent,
+    BrotesComponent,
 
   ],
   imports: [
